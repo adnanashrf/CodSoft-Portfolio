@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Images/android-chrome-512x512.png" type="image/x-icon">
+    <title>Adnan Ashraf - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Adnan Ashraf</h1>
+        <p id="role" class="animated-text">Web Developer</p>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="Images/Adnan-3.jpg" alt="Your Name" class="about-image">
+                <p class="about-text">
+                    Welcome! <br>I am Student of Software Engineering in Mirpur University of Science &
+                    Technology.<br><br>
+                    I am from Bagh Azad Kashmir, Pakistan. I have done my Matric from FG Public School Bagh AJK & FSc
+                    from Army Public School & Collage Bagh AJK. Currently I am doing Software Engineering from Mirpur
+                    University of Science & Technology, Mirpur AJK.
+                    I am very passionate about Web Development. I want to become a Full Stack Developer in my future. I
+                    have learned computer languages like C#, Java, C, C++ with object oriented programming in my past
+                    years. <br><br>I have started learning Web Development one year ago.
+                    I have learnt HTML, CSS, Bootstrap, JQuery, JavaScript. Now I am learning Web Backend Development
+                    with C#, Node.JS, Angular & SQL Database Languages. I am very passionate about technology eager to
+                    learn & develop such useful things for my community and people.
+                    I am from an area where there is no technology and people are living in very difficult life & I wish
+                    to create a center of development & technology in my area. I really want to learn something to serve
+                    mankind in any way possible and this is the sole reason why technology has always excited me.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills">
+
+            <h2>My Skills</h2>
+
+            <p>HTML</p>
+            <div>
+                <div class="skills html">90%</div>
+            </div>
+
+            <p>CSS</p>
+            <div>
+                <div class="skills css">85%</div>
+            </div>
+
+            <p>Bootstrap</p>
+            <div>
+                <div class="skills bootstrap">80%</div>
+            </div>
+
+            <p>JavaScript</p>
+            <div>
+                <div class="skills js">65%</div>
+            </div>
+
+            <p>React</p>
+            <div>
+                <div class="skills react">50%</div>
+            </div>
+
+            <p>Django</p>
+            <div>
+                <div class="skills django">40%</div>
+            </div>
+
+            <p>MySQL</p>
+            <div>
+                <div class="skills mysql">60%</div>
+            </div>
+
+            <p>MangoDB</p>
+            <div>
+                <div class="skills mangodb">30%</div>
+            </div>
+        </section>
+
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="Images/calculator.png" alt="Project 1">
+                    <h3>SIMPLE CALCULATOR</h3>
+                    <p>This project offers basic arithmetic operations such as addition, subtraction, multiplication, and division. It provides a user-friendly interface for quick calculations. With straightforward functionality, it serves as a handy tool for performing simple math tasks efficiently, enabling users to store and recall previous calculations effortlessly.</p>
+                </div>
+                <div class="project">
+                    <img src="Images/math.png" alt="Project 2">
+                    <h3>MATH QUIZ HAME</h3>
+                    <p>Engage in an interactive learning experience with this math quiz game. Designed to enhance mathematical skills, it challenges users with various arithmetic questions and puzzles. Through gameplay, users can improve their calculation speed, accuracy, and problem-solving abilities while enjoying an entertaining educational activity.</p>
+                </div>
+                <div class="project">
+                    <img src="Images/profile.jpg" alt="Project 3">
+                    <h3>SIMPLE PROFILE PAGE</h3>
+                    <p>Create your digital identity with this straightforward profile page. Tailored for personal or professional use, it offers a minimalist design to showcase essential information about individuals. With customizable sections for bio, contact details, and interests, it provides a concise yet informative snapshot of your identity and accomplishments.</p>
+                </div>
+            </div>
+        </section><br>
+
+        <section id="resume">
+            <h2>Resume</h2>
+            <div class="resume-download">
+                <p>Download my resume in PDF format:</p>
+                <button><a href="Adnan CV.pdf" download="Adnan CV.pdf">Click to Download</a></button>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <div class="contact-box">
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="mailto:adnankashmiri567@gmail.com">Email Address</a></p>
+                </div>
+                <div class="contact-box">
+                    <i class="fas fa-phone"></i>
+                    <p><a href="tel:+923468419339">Phone Number</a></p>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Adnan Ashraf. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const roles = ["Web Developer", "SEO Link-Builder", "UX Designer"];
+        let roleIndex = 0;
+        let wordIndex = 0;
+
+        function animateRoles() {
+            const roleElement = document.getElementById("role");
+
+            roleElement.classList.remove("fadeIn");
+            roleElement.textContent = roles[roleIndex].slice(0, wordIndex + 1);
+            wordIndex += 1;
+
+            if (wordIndex === roles[roleIndex].length + 1) {
+                wordIndex = 0;
+                roleIndex = (roleIndex + 1) % roles.length;
+            }
+
+            roleElement.classList.add("fadeIn");
+        }
+
+        setInterval(animateRoles, 100); // Change word every second
+    </script>
+
+</body>
+
+</html>
